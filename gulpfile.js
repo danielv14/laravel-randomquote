@@ -2,6 +2,9 @@ const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue');
 
+// use livereload
+require('laravel-elixir-livereload');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -15,5 +18,7 @@ require('laravel-elixir-vue');
 
 elixir(mix => {
     mix.sass('app.scss')
-       .webpack('app.js');
+       .webpack('app.js')
+       .livereload();
+
 });
