@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('QuotesController@index');
 });
+
+// Resource Route for CRUDing quotes
+Route::resource('quotes', 'QuotesController', [
+  'parameters' => 'singular'
+]);
