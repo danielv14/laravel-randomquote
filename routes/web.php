@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('QuotesController@index');
-});
+Route::get('/', 'QuotesController@index');
+
 
 // Resource Route for CRUDing quotes
 Route::resource('quotes', 'QuotesController', [
