@@ -103,6 +103,8 @@ class QuotesController extends Controller
     {
         $quote = Quote::findOrFail($id);
         $quote->delete();
+        session()->flash('flash_message', 'Quote has been deleted');
+
         return redirect()->action('QuotesController@index');
     }
 }
