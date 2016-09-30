@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'RandomQuoteController@index');
-Route::get('/random', 'RandomQuoteController@random');
-
+Route::get('/', function() {
+  return view('randomQuote');
+});
 
 // Resource Route for CRUDing quotes
 Route::resource('quotes', 'QuotesController', [
