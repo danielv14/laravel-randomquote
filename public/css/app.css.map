@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA","file":"app.css","sourceRoot":"/source/","sourcesContent":[]}
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAAA;EACE,aAAa,EACd;;AAED;EACE,qBAAc;EAAd,cAAc;EACd,0BAAoB;EAApB,oBAAoB;EACpB,yBAAwB;EAAxB,wBAAwB;EACxB,aAAa,EAEd","file":"app.css","sourcesContent":["body, html {\n  height: 100%;\n}\n\n.flex-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n\n}\n"],"sourceRoot":"/source/"}
