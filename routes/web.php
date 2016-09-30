@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'RandomQuoteController@index');
+Route::get('/random', 'RandomQuoteController@random');
 
 
 // Resource Route for CRUDing quotes
