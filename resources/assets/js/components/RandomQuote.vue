@@ -6,7 +6,7 @@
     <section class="flex-container flex-quote">
       <p>
         <span class="author">
-          By <strong>{{ author }}.</strong>
+          By {{ author }}.
         </span>
         <br>
         {{ body }}
