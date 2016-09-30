@@ -7,7 +7,7 @@
       </div>
 
       <div class="flex-container">
-        <a href="/" class="quote-link">Quote me!</a>
+        <randomizebutton></randomizebutton>
       </div>
 
 
