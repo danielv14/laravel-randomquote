@@ -1,8 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+@import 'https://fonts.googleapis.com/css?family=Lalezar';
 
+@import 'variables';
+@import 'mixins';
 
 body, html {
   height: 100%;
 }
 
-@import 'random-quote';
+body {
+  background-color: $body-bg;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+}

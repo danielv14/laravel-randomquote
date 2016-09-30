@@ -1,2 +1,18 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+@import 'variables';
+@import 'mixins';
+
+
+body {
+  background-color: $body-bg;
+}
+
+.container {
+  margin-top: 20px;
+  border-radius: 3px;
+  @include box-shadow();
+  background-color: $container-bg;
+}

@@ -5765,4 +5765,13 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  background-color: #EDEFF0; }
+
+.container {
+  margin-top: 20px;
+  border-radius: 3px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #FFF; }
+
 /*# sourceMappingURL=admin.css.map */
