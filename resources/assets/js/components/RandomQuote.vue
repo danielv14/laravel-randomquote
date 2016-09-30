@@ -1,17 +1,20 @@
 <template>
 
-  <div class="flex-container flex-button">
-
+  <section class="flex-container flex-button">
     <a href="#" class="quote-link" v-on:click.prevent="getQuote">New quote</a>
+  </section>
 
-  </div>
-
-  <div class="flex-container flex-quote">
-
+  <section class="flex-container flex-quote">
     <p>
-      {{body}} - <strong>By {{author}}</strong>
+      {{ body }}
     </p>
-  </div>
+  </section>
+
+  <section class="flex-container flex-quote">
+    <p>
+      By <strong>{{ author }}</strong>
+    </p>
+  </section>
 
 
 </template>
