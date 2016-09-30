@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 
+use App\Quote;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,6 +15,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+// return a random quote
+Route::get('/random', function() {
+  return Quote::inRandomOrder()->first();
+});

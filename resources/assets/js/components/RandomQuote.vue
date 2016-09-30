@@ -34,7 +34,7 @@
         },
         methods: {
           getQuote: function() {
-            this.$http.get('/random').then((response) => {
+            this.$http.get('/api/random').then((response) => {
               console.log(response);
               this.$set('author', response.body.author);
               this.$set('body', response.body.body);
