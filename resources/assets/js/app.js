@@ -14,7 +14,7 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('randomizebutton', require('./components/RandomizeButton.vue'));
+Vue.component('randomquote', require('./components/RandomQuote.vue'));
 
 const app = new Vue({
     el: 'body'

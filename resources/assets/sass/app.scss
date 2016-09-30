@@ -5,36 +5,4 @@ body, html {
   height: 100%;
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    width: 70%;
-    font-size: 36px;
-    line-height: 1.7em;
-    font-family: 'Open Sans Condensed', sans-serif;
-
-  }
-}
-
-.quote-link {
-  background-color: #67D5B5;
-  padding: 15px 75px;
-  margin-bottom: 40px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  font-family: 'Open Sans Condensed', sans-serif;
-  transition: background-color 250ms ease-in-out;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: lighten(#67D5B5, 10%);
-  }
-
-}
+@import 'random-quote';
