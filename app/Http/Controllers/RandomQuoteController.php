@@ -12,6 +12,7 @@ class RandomQuoteController extends Controller
 {
     public function index()
     {
-      return view('randomQuote');
+      $quote = Quote::inRandomOrder()->first();
+      return view('randomQuote', compact('quote'));
     }
 }

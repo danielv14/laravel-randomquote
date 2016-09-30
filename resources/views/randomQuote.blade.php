@@ -1,9 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="flex-wrapper">
 
-      <h1>Hello!</h1>
+      <div class="flex-container">
+        <p>{{ $quote->body }} - <strong>{{$quote->author}}</strong></p>
+      </div>
 
-  </section>
+      <div class="flex-container">
+        <a href="/" class="quote-link">Quote me!</a>
+      </div>
+
+
 @endsection
