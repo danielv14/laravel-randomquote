@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Http\Requests\QuoteRequest;
+
+use App\Quote;
+
 class QuotesController extends Controller
 {
     /**
@@ -15,7 +19,9 @@ class QuotesController extends Controller
      */
     public function index()
     {
-      return view('quotes.index');
+      // get all quotes
+      $quotes = Quote::all();
+      return view('quotes.index', compact('quotes'));
     }
 
     /**
@@ -25,7 +31,7 @@ class QuotesController extends Controller
      */
     public function create()
     {
-        //
+        return view('quotes.create');
     }
 
     /**
@@ -34,9 +40,15 @@ class QuotesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(QuoteRequest $request)
     {
-        //
+        Quote::create($request->all());
+
+        session()->flash('flash_message', 'Quote has been created');
+
+
+        // redirect back to quote index
+        return redirect()->action('QuotesController@index');
     }
 
     /**
@@ -47,7 +59,8 @@ class QuotesController extends Controller
      */
     public function show($id)
     {
-        //
+        $quote = Quote::findOrFail($id);
+        return view('quotes.show', compact('quote'));
     }
 
     /**
@@ -58,7 +71,8 @@ class QuotesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $quote = Quote::findOrFail($id);
+        return view('quotes.edit', compact('quote'));
     }
 
     /**
@@ -68,9 +82,15 @@ class QuotesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(QuoteRequest $request, $id)
     {
-        //
+        $quote = Quote::findOrFail($id);
+        $quote->update($request->all());
+
+        session()->flash('flash_message', 'Quote has been updated');
+
+
+        return redirect()->action('QuotesController@index');
     }
 
     /**
@@ -81,6 +101,8 @@ class QuotesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $quote = Quote::findOrFail($id);
+        $quote->delete();
+        return redirect()->action('QuotesController@index');
     }
 }
