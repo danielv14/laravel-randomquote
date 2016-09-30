@@ -59,10 +59,10 @@
   .quote-wrapper {
     background-color: $container-bg;
     @include box-shadow();
+    @include border-radius();
     width: 80%;
     margin: 0 auto;
     margin-top: 15px;
-    border-radius: 3px;
   }
 
 

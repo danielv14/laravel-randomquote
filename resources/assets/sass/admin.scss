@@ -12,7 +12,7 @@ body {
 
 .container {
   margin-top: 20px;
-  border-radius: 3px;
+  @include border-radius();
   @include box-shadow();
   background-color: $container-bg;
 }
