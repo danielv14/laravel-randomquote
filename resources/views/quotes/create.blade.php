@@ -11,7 +11,14 @@
     @include('quotes.form', ['submit' => 'Create quote'])
   {!! Form::close() !!}
 
+  <hr>
+  <div class="text-center">
+    <a href="{{route('quotes.index')}}">Back</a>
   </div>
+
+  </div>
+
+
 
 
 @endsection
