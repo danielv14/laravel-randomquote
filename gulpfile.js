@@ -18,6 +18,7 @@ require('laravel-elixir-livereload');
 
 elixir(mix => {
     mix.sass('app.scss')
+       .sass('admin.scss', 'public/css/admin.css')
        .webpack('app.js')
        .livereload();
 
